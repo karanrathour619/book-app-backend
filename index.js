@@ -9,9 +9,10 @@ require('dotenv').config()
 // middleware
 app.use(express.json());
 app.use(cors({
-    origin: ['http://localhost:5173', 'https://book-app-frontend-tau.vercel.app'],
+    origin: ['http://localhost:5173', 'https://bookhive-book-selling.vercel.app', 'https://bookhive-frontend-qo4sdawr2-karan-singh-rathours-projects.vercel.app'],
     credentials: true
 }))
+app.set("trust proxy", 1);
 
 // routes
 const bookRoutes = require('./src/books/book.route');
